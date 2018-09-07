@@ -1,0 +1,69 @@
+scp train_model.py schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/
+scp prep_step.py schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/
+
+scp pubmed.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+scp pretrain_dat.tar schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+tar -cvzf pretrain_dat.tar.gz input_prep_w2v.csv target_prep_w2v.csv w2v_embed.csv
+
+scp vector_modi.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+scp train_model_g.py schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/
+scp train_model_g_1d.py schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/
+
+scp unseen_model_g.py schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/
+
+
+scp input_prep_unseen_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_unseen_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat_50.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat_50_norm.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp input_prep_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+########Initialzed Uniform#######################
+
+scp input_prep_unseen_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_unseen_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp input_prep_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp vector_uni.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat_50_50.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat_50_norm.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp sim_mat_50_max.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+
+################################################
+
+######## GloVe #######################
+scp input_prep_unseen_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_unseen_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp input_prep_w2v_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp target_prep_g.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+scp vector_glove.csv schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/
+
+
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/test_result.csv ~/Desktop/Msc_Project/data/
+
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/data/test_target.csv ~/Desktop/Msc_Project/data/
+
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/randomly_uniform_model.ipynb ~/Desktop/Msc_Project/script/
+
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/model/temp_5050/checkpoint ~/Desktop/Msc_Project/model/5050model/
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/model/temp_5050/model.ckpt.data-00000-of-00001 ~/Desktop/Msc_Project/model/5050model/
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/model/temp_5050/model.ckpt.index ~/Desktop/Msc_Project/model/5050model/
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/model/temp_5050/model.ckpt.meta ~/Desktop/Msc_Project/model/5050model/
+
+
+chmod 400 private-keys-m-62eb3cd6-e60d-4e3f-9a51-350ca02d033c-0.pem
+ssh -i private-keys-m-62eb3cd6-e60d-4e3f-9a51-350ca02d033c-0.pem ubuntu@vm-52-210-16-43.rosettavm.com
+
+cd anaconda3/envs/
+source activate tensorflow_p36
+
+scp -i bing.pem learn_models_torch.py ubuntu@ec2-18-223-111-181.us-east-2.compute.amazonaws.com:Msc_project_mimic/train
+
+
+scp schaweew@blaze.cs.ucl.ac.uk:~/Msc_Project/script/prototype_unseen.ipynb ~/Desktop/Msc_Project/Script/
